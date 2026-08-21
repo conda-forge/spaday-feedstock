@@ -1,5 +1,5 @@
 context:
-  version: "0.1.0"
+  version: "0.7.0"
 
 package:
   name: spaday
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/spaday/spaday-${{ version }}.tar.gz
-  sha256: 4572a7deb69d0e0af340fc5be7ea0fd7e7cab11b7f2330add7609ccc4931a22a
+  sha256: 7d28c48f2b8eb768f22534dfaad269f6c6dd50ebe8970247bb2a1ed9aae96428
 
 build:
   number: 0
@@ -50,7 +50,7 @@ requirements:
     - pnpm
     - if: is_abi3
       then:
-      - python-abi3
+        - python-abi3
   run:
     - python
 
