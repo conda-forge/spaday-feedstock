@@ -53,6 +53,7 @@ requirements:
         - python-abi3
   run:
     - python
+    - pydantic >=2
 
 tests:
   - python:
