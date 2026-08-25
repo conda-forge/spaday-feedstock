@@ -1,5 +1,5 @@
 context:
-  version: "0.7.1"
+  version: "0.7.2"
 
 package:
   name: spaday
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/spaday/spaday-${{ version }}.tar.gz
-  sha256: 58016e8ec4ff455d0280a1ff63810437702f5c532e5bcf9cccbcc927059f36de
+  sha256: 85314a0b867e41c2a729fd19f6f926527c9d4a212f359b58f39c4080953228f9
 
 build:
   number: 0
