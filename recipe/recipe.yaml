@@ -10,7 +10,7 @@ source:
   sha256: f1ac5122d7dcdcde726b24566f985e3e28306a1da3d79ac57f8aec008f63c223
 
 build:
-  number: 0
+  number: 1
   skip: is_abi3 and not is_python_min
   python:
     version_independent: ${{ is_abi3 }}
@@ -29,9 +29,13 @@ requirements:
   build:
     - if: build_platform != target_platform
       then:
-        - python
+        - python ${{ python_min }}.*
         - cross-python_${{ target_platform }}
         - crossenv
+        - hatchling
+        - hatch-js
+        - hatch-rs
+        - pnpm
     - ${{ compiler('c') }}
     - ${{ stdlib("c") }}
     - ${{ compiler('rust') }}
