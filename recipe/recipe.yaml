@@ -1,5 +1,5 @@
 context:
-  version: "0.7.12"
+  version: "0.8.1"
 
 package:
   name: spaday
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/spaday/spaday-${{ version }}.tar.gz
-  sha256: f1ac5122d7dcdcde726b24566f985e3e28306a1da3d79ac57f8aec008f63c223
+  sha256: b5d68fd644043db015020b9905a2484f13e104da2556548ecbf21bddea451a15
 
 build:
-  number: 1
+  number: 0
   skip: is_abi3 and not is_python_min
   python:
     version_independent: ${{ is_abi3 }}
@@ -40,7 +40,7 @@ requirements:
     - ${{ stdlib("c") }}
     - ${{ compiler('rust') }}
     - rust-std-wasm32-unknown-unknown
-    - wasm-bindgen-cli ==0.2.126
+    - wasm-bindgen-cli ==0.2.127
     - cargo-bundle-licenses
     - if: linux
       then:
