@@ -40,7 +40,7 @@ requirements:
     - ${{ stdlib("c") }}
     - ${{ compiler('rust') }}
     - rust-std-wasm32-unknown-unknown
-    - wasm-bindgen-cli ==0.2.127
+    - wasm-bindgen-cli ==0.2.129
     - cargo-bundle-licenses
     - if: linux
       then:
@@ -58,6 +58,7 @@ requirements:
   run:
     - python
     - pydantic >=2
+    - typing-extensions >=4
 
 tests:
   - python:
