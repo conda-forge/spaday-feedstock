@@ -1,5 +1,5 @@
 context:
-  version: "0.13.1"
+  version: "0.14.0"
 
 package:
   name: spaday
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/spaday/spaday-${{ version }}.tar.gz
-  sha256: ce6eed60dccc61cb7f932f33392664b350777773a747eb6082eb02aa841d4e50
+  sha256: 5f1188a06639a0c142e0737d5e05bbaa2f388ebb84b2e515049314f2d31d3528
 
 build:
   number: 0
@@ -34,7 +34,7 @@ requirements:
         - crossenv
         - hatchling
         - hatch-js
-        - hatch-rs
+        - hatch-rs >=0.3.0
         - pnpm
     - ${{ compiler('c') }}
     - ${{ stdlib("c") }}
@@ -50,7 +50,7 @@ requirements:
     - pip
     - hatchling
     - hatch-js
-    - hatch-rs
+    - hatch-rs >=0.3.0
     - pnpm
     - if: is_abi3
       then:
