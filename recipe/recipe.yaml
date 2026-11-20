@@ -34,7 +34,7 @@ requirements:
         - crossenv
         - hatchling
         - hatch-js
-        - hatch-rs >=0.3.0
+        - hatch-rs >=0.6.1
         - pnpm
     - ${{ compiler('c') }}
     - ${{ stdlib("c") }}
@@ -44,13 +44,13 @@ requirements:
     - cargo-bundle-licenses
     - if: linux
       then:
-        - pkg-config
+        - pkgconf
   host:
     - python
     - pip
     - hatchling
     - hatch-js
-    - hatch-rs >=0.3.0
+    - hatch-rs >=0.6.1
     - pnpm
     - if: is_abi3
       then:
